@@ -1,0 +1,254 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(10, 10, 10);
+    color: rgb(240, 240, 240);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100vw;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+header{
+    width: 95%;
+    max-width: 788px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 12px;
+    margin-top: 15px;
+}
+.share-btn{
+    width: 25px;
+    height: 25px;
+    border-radius: 20px;
+    background-color: rgb(240, 240, 240);
+    margin-right: 120px;
+}
+.container{
+    width: 51%;
+    height:300px;
+    max-width: 680px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: first baseline; */
+    position: relative;
+    top: -50px;
+    
+}
+.container h1{
+    font-size: 12px;
+    margin-top: 3px;
+}
+a{
+    font-size: 10px;
+    text-decoration: none;
+    color: rgba(240,240,240);
+}
+.tile{
+    width: 95%;
+    height: 30px;
+    background-color: rgb(37,37,37);
+    margin: 4px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.tile:hover{
+    transition: cubic-bezier(.07, 1.41, .82, 1.41)0.2s;
+    transform: scale(1.02);
+}
+.tile p{
+    margin-top: 8px;
+}
+/* .image-container{
+    height: 96px;
+    width: 96px;
+    overflow: hidden;
+} */
+.image-container img{
+    /* height: 100%; */
+    width: 70px;
+}
+.tile-share-btn{
+    width: 25px;
+    height: 25px;
+    margin-top: 2px;
+    margin-right: 3px;
+    border-radius: 20px;
+    background-color: rgb(52,52,52);
+}
+.tile-share-btn:hover{
+    background-color: rgb(17, 15, 15);
+}
+.tile-share-btn img{
+    width: 14px;
+    height: 14px;
+    margin-top: 5.1px;
+    margin-left: 5px;
+}
+.icon{
+    width: 20px;
+    height: 20px;
+}
+.icon img{
+    width: 18px;
+    height: 18px;
+    margin: 7px 6px;
+}
+img.insta{
+  width: 17px;
+  height: 17px;
+}
+.share-btn img{
+    width: 15px;
+    height: 15px;
+    margin-left: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.share-btn{
+    cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    body{
+    font-family: Verdana, Tahoma, sans-serif;
+    }
+  .container{
+    margin-top: 30px;
+    width: 90%;
+    height: 100vh;
+  }
+  .tile{
+    position: relative;
+    top: 10px;
+    width: 85%;
+    height: 3%;
+    padding: 22px;
+  }
+  .tile p{
+    font-size: 17px;
+    position: relative;
+    top: -4px;
+    font-family: Verdana, Tahoma, sans-serif;
+  }
+  .icon img{
+    width: 30px; 
+    height: 30px;
+    position: relative;
+    top: -8px;
+  }
+  img.insta{
+    width: 25px;
+    height: 25px;
+    margin-left: 8px;
+  }
+  .tile-share-btn{
+    width: 39px;
+    height: 39px;
+    position: relative;
+    top: -8px;
+    right: -8px ;
+  }
+  .tile-share-btn img{
+    width: 23px;
+    height: 23px;
+    margin-top: 7px;
+    margin-left: 8px;
+  }
+  .share-btn{
+    position: relative;
+    left: 85px;
+    top: 35px;
+    padding: 7px;
+  }
+  .share-btn img{
+    width: 20px;
+    height: 20px;
+    position: relative;
+    right: 3px;
+    top: -2px;
+  }
+  .image-container img{
+    width: 150px;
+  }
+  .container h1{
+    font-size: 19px;
+    margin-top: 10px;
+  }
+  .alert{
+    margin-top: 0px;
+  }
+
+}
+@media screen and (max-width: 400px) {
+  .alert{
+    position: relative;
+    top: -680px;
+  }
+  
+}
+
+/* Alert Notification */
+
+.alert{
+  display: flex;
+  background: lightgreen;
+  margin-top: -43%;
+  padding: 10px ;
+  padding-right: 25px;
+  border-radius: 5px;
+  border-left: 7px solid green;
+  z-index: 2;
+}
+.alert img{
+  width: 15px;
+  height: 15px;
+  margin-top: 8px;
+  margin-right: 5px;
+}
+.alert h1{
+  font-size: 10px;
+  color: green;
+  margin-top: 8px;
+  font-family: 'Poppins', sans-serif;
+}
+.alert button{
+  width: 35px;
+  height: 22px;
+  position: relative;
+  left: 18px;
+  top: 4px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 10px;
+  font-family: 'Poppins', sans-serif;
+  cursor: pointer;
+}
+.alert button:hover{
+  background-color: rgb(16, 71, 16);
+}
+.alert.hide {
+  display: none;
+}
+.alert.show {
+  animation: show_slide 0.8s ease forwards;
+}
+@keyframes show_slide {
+  0% {
+    transform: translateY(-100%);
+  }
+  40% {
+    transform: translateY(0px);
+  }
+  80% {
+    transform: translateY(0px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+  
+}
